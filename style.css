@@ -41,7 +41,30 @@ label {
     height: 200px;
     padding-left: 20px;
     padding-right: 20px;
+
 }
+
+label:hover img{
+    border-style: solid ;
+    border-radius: 10px;
+    border-color: rgb(245, 7, 118); 
+}
+
+
+
+p {
+    font-family: 'Sintony', sans-serif;
+    z-index: 100;
+  position: absolute;
+  cursor: pointer;
+  padding-bottom: 65px;
+  max-width: 100px;
+  padding-top: 15px;
+  
+}
+
+
+
 
 
 
@@ -83,15 +106,7 @@ img {
 
 }
 
-p {
-    font-family: 'Sintony', sans-serif;
-    z-index: 100;
-  position: absolute;
-  cursor: pointer;
-  padding-bottom: 65px;
-  max-width: 100px;
-  padding-top: 15px;
-}
+
 
 button {
     display: flex;
@@ -146,4 +161,11 @@ button {
     display: flex;
     justify-content: center;
     align-self: center;
+}
+
+#get {
+    font-family: 'Open Sans Condensed', sans-serif;
+
+
+    font-size: 20px;
 }
