@@ -1,3 +1,149 @@
 input[type=radio] {
     display: none;
 }
+
+#questions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.topRow {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 0;
+}
+
+.bottomRow {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+h1 {
+    font-family: 'Londrina Outline', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    background-image: url(header.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    Height: 200px; 
+    color: white;
+    align-items: center;
+}
+
+
+h2 {
+    display: flex;
+    justify-content: center;
+    background-image: url(back.jpg);
+    background-position: center;
+    background-size: cover;
+    Height: 75px; 
+    width: 75%;
+    align-self: center;
+    align-items: center;
+
+
+}
+
+img {
+    position: absolute;
+    height: 150px;
+    width: 150px; 
+
+}
+
+p {
+    font-family: 'Sintony', sans-serif;
+    z-index: 100;
+  position: absolute;
+  cursor: pointer;
+  padding-bottom: 65px;
+  max-width: 100px;
+  padding-top: 15px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-style: solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: darksalmon;
+    
+}
+
+#calculate {
+    display: flex;
+    justify-content: center;
+}
+
+.modalHidden {
+    display: none;
+}
+
+.modalShown {
+    display: flex;
+    justify-content: center;
+    
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+#yourImage {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
