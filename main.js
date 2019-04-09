@@ -122,3 +122,9 @@ $('label.six').on("click", function() {
     $('label.six').not(this).stop().animate({opacity: 0.3}, 300);
     $(this).stop().animate( {paddingBottom: "+=5px"})
 });
+
+$('span.close').on("click", function() {
+    $('#myModal').removeClass("modalShown");
+    $('#myModal').addClass("modalHidden");
+    location.reload(true);
+});
