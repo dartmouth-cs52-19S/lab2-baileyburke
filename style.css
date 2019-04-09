@@ -119,13 +119,29 @@ button {
     width: 200px;
     height: 50px;
     background-color: darksalmon;
+    transition: all 0.5s;
+    cursor: pointer;
+
     
+}
+
+button:after {
+    position: absolute;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
 }
 
 button:hover {
     box-shadow: 0 9px #999;
+    padding-right: 20px;
+    padding-left: 8px;
 }
 
+button:hover:after {
+    opacity: 1;
+    right: 10px;
+}
 .close:hover {
     cursor: pointer;
 }
@@ -196,7 +212,7 @@ button:hover {
     }
   }
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 640px) { 
     .topRow {
         flex-direction: column;
         align-items: center;
