@@ -1,27 +1,22 @@
+//code from lab2 description
 $('#get').on('click', function(e) {
-    // gather all checked radio-button values
     var choices = $("input[type='radio']:checked").map(function(i, radio) {
       return $(radio).val();
     }).toArray();
-    // now you have an array of choices = ["valueofradiobox1", "valueofradiobox2", "valueofradiobox2"]
-    // you'll need to do some calculations with this
-    // a naive approach would be to just choose the most common option - seems reasonable
 
-   
     if (choices.length != 6) {
         $('#yourWord').text('ERROR: Please make sure that every single question was filled out.');
         $('#yourImage').attr('src', 'https://media.giphy.com/media/5QW76Ww9bquHdg1fTv/giphy.gif');
         $('#myModal').addClass("modalShown");
         $('#myModal').removeClass("modalHidden");
-      
-
     }
-    else {
+
+    else { 
+        //modified from https://stackoverflow.com/questions/2440295/extracting-the-most-duplicate-value-from-an-array-in-javascript-with-jquery
         var freqs = {};
         var mostFrequent;
         var lowest = 0;
         
-
         $.each(choices, function(index, value) {
             if (freqs[value] != undefined) {
                 freqs[value]++;
@@ -38,7 +33,6 @@ $('#get').on('click', function(e) {
             }
         });
         
-
         //My values and what they line up to:
         //1 = yeet
         //2 = swag
@@ -47,7 +41,7 @@ $('#get').on('click', function(e) {
         //5 = woot woot
         //6 = yeah yeahhh
         
-
+        //understood how to use jquery functions from https://www.w3schools.com/jquery/jquery_dom_set.asp
         if (mostFrequent == 1) {
             $('#yourWord').text('Your word: YEET');
             $('#yourImage').attr('src', 'https://media.giphy.com/media/5PhDdJQd2yG1MvHzJ6/giphy.gif');
@@ -93,38 +87,41 @@ $('#get').on('click', function(e) {
 
   });
 
-  $('label.one').on("click", function() {
+  //animate function altered from https://www.w3schools.com/jquery/eff_animate.asp
+  //Idea for how to change opacity on everything but the one clicked was inspired by https://stackoverflow.com/questions/5568398/change-the-opacity-of-all-elements-except-the-one-selected
+
+    $('label.one').on("click", function() {
       $('label.one').not(this).stop().animate({opacity: 0.3}, 300);
       $(this).stop().animate( {paddingBottom: "+=5px"})
 });
 
-  $('label.second').on("click", function() {
-    $('label.second').not(this).stop().animate({opacity: 0.3}, 300);
-    $(this).stop().animate( {paddingBottom: "+=5px"})
+    $('label.second').on("click", function() {
+      $('label.second').not(this).stop().animate({opacity: 0.3}, 300);
+      $(this).stop().animate( {paddingBottom: "+=5px"})
 });
 
-$('label.three').on("click", function() {
-    $('label.three').not(this).stop().animate({opacity: 0.3}, 300);
-    $(this).stop().animate( {paddingBottom: "+=5px"})
+    $('label.three').on("click", function() {
+      $('label.three').not(this).stop().animate({opacity: 0.3}, 300);
+      $(this).stop().animate( {paddingBottom: "+=5px"})
 });
 
-$('label.four').on("click", function() {
-    $('label.four').not(this).stop().animate({opacity: 0.3}, 300);
-    $(this).stop().animate( {paddingBottom: "+=5px"})
+    $('label.four').on("click", function() {
+      $('label.four').not(this).stop().animate({opacity: 0.3}, 300);
+      $(this).stop().animate( {paddingBottom: "+=5px"})
 });
 
-$('label.five').on("click", function() {
-    $('label.five').not(this).stop().animate({opacity: 0.3}, 300);
-    $(this).stop().animate( {paddingBottom: "+=5px"})
+    $('label.five').on("click", function() {
+      $('label.five').not(this).stop().animate({opacity: 0.3}, 300);
+      $(this).stop().animate( {paddingBottom: "+=5px"})
 });
 
-$('label.six').on("click", function() {
-    $('label.six').not(this).stop().animate({opacity: 0.3}, 300);
-    $(this).stop().animate( {paddingBottom: "+=5px"})
+    $('label.six').on("click", function() {
+      $('label.six').not(this).stop().animate({opacity: 0.3}, 300);
+      $(this).stop().animate( {paddingBottom: "+=5px"})
 });
 
-$('span.close').on("click", function() {
-    $('#myModal').removeClass("modalShown");
-    $('#myModal').addClass("modalHidden");
-    location.reload(true);
+    $('span.close').on("click", function() {
+      $('#myModal').removeClass("modalShown");
+      $('#myModal').addClass("modalHidden");
+      location.reload(true); 
 });
